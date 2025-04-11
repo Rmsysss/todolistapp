@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+}
+
+.todo-app {
+    max-width: 640px;
+    border: 2px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+.todo-app h1 {
+    font-size: 3rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+#todo-form {
+    padding-bottom: 2rem;
+}
+
+#todo-input {
+    width: 250px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+
+.btn {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0 1rem 1rem;
+    margin: 0.5rem;
+}
+
+#todo-completed {
+    list-style-type: none;
+    padding: 0 1rem 1rem;
+    margin: 0.5rem;
+}
+
+p {
+    text-align: center;
+}
