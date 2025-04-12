@@ -10,6 +10,10 @@ form.addEventListener('submit', function (e) {
     if (taskText === '') return;
     
     const li = document.createElement('li');
+    li.className = 'todo-item';
+
+    const chkboxGrp = document.createElement('div');
+    chkboxGrp.className = 'chkbx-grp';
     
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -17,17 +21,26 @@ form.addEventListener('submit', function (e) {
     const label = document.createElement('label');
     label.textContent = " " + taskText;
 
+    const buttonGrp = document.createElement('div');
+    buttonGrp.className = 'button-group';
+
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
+    deleteBtn.className = 'optionBtn';
 
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Edit';
+    editBtn.className = 'optionBtn';
 
-    li.appendChild(checkbox);
-    li.appendChild(label);
+    chkboxGrp.appendChild(checkbox);
+    chkboxGrp.appendChild(label);
 
-    li.appendChild(deleteBtn);
-    li.appendChild(editBtn);
+    li.appendChild(chkboxGrp);
+
+    buttonGrp.appendChild(deleteBtn);
+    buttonGrp.appendChild(editBtn);
+
+    li.appendChild(buttonGrp);
 
     list.appendChild(li);
 
