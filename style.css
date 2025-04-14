@@ -52,8 +52,13 @@ body {
     border-radius: 10px;
     margin: 0.5rem;
     background-color: #2d3748;
-    cursor: pointer;
     color: #d1d1d1;
+}
+
+.addBtn:hover {
+    background-color: #4A5568;
+    transform: scale(1.1);
+    color: #F7FAFC;
 }
 
 .list {
@@ -89,4 +94,40 @@ body {
 .button-group {
     display: flex;
     gap: 8px
+}
+
+.editBtn {
+    background-color: #00BFFF;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.delBtn {
+    background-color: #F87171;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.editBtn:hover {
+    background-color: #1EC8FF;
+    transform: scale(1.1);
+}
+
+.delBtn:hover {
+    background-color: #FB9A9A;
+    transform: scale(1.1);
+}
+
+.addBtn, .editBtn, .delBtn {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.addBtn:focus,
+.editBtn:focus,
+.delBtn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4A5568; /* or whatever color you like */
 }
