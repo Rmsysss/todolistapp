@@ -30,11 +30,11 @@ function createTaskElement(task, index) {
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
-    deleteBtn.className = 'optionBtn';
+    deleteBtn.className = 'delBtn';
 
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Edit';
-    editBtn.className = 'optionBtn';
+    editBtn.className = 'editBtn';
 
     chkboxGrp.appendChild(checkbox);
     chkboxGrp.appendChild(label);
@@ -51,7 +51,7 @@ function createTaskElement(task, index) {
         list.appendChild(li);
     }
 
-    // ✅ Checkbox handler
+    // Checkbox handler
     checkbox.addEventListener('change', function () {
         if (this.checked) {
             task.completed = true;
@@ -62,14 +62,14 @@ function createTaskElement(task, index) {
         }
     });
 
-    // ✅ Delete handler
+    // Delete handler
     deleteBtn.addEventListener('click', function () {
         tasks.splice(index, 1); // remove from array
         save_tasks();
         li.remove();
     });
 
-    // ✅ Edit handler
+    // Edit handler
     editBtn.addEventListener('click', function () {
         const newText = prompt('Edit your task:', label.textContent.trim());
         if (newText !== null && newText.trim() !== '') {
